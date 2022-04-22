@@ -1,5 +1,3 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        counter = collections.Counter(nums)
-        ans = [x for (x,y) in counter.most_common(k)]
-        return ans
+        return [x[0] for x in collections.Counter(nums).most_common(k)]
